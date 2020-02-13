@@ -6,19 +6,21 @@
       alt="Logo ML">
   </div>
   <div class="col-7 col-md-8 col-lg-9 my-auto">
-    <form class="form-inline m-0">
+    <div class="form-inline m-0">
       <div class="input-group w-100">
         <input
           type="search"
           class="form-control search-box"
           placeholder="Nunca dejes de buscar"
           aria-label="Nunca dejes de buscar"
-          aria-describedby="button-addon2">
+          aria-describedby="button-addon2"
+          [(ngModel)]="query">
         <div class="input-group-append">
           <button
             class="btn btn-light btn-search"
             type="button"
-            id="button-addon2">
+            id="button-addon2"
+            (click)="search()">
             <img
               src="assets/img/ic_Search.png"
               class="d-block img-fluid"
@@ -26,6 +28,6 @@
           </button>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </nav>

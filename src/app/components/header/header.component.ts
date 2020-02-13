@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemService } from 'src/app/services/item/item.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  query = '';
 
-  constructor() { }
+  constructor(
+    private itemService: ItemService,
+  ) { }
 
   ngOnInit() {
+  }
+
+  search() {
+    this.itemService.getItems(this.query)
+      .subscribe((res) => {
+        console.log(res)
+      }, err => console.error(err));
   }
 
 }
