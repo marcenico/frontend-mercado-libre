@@ -1,0 +1,22 @@
+@import "../../../assets/scss/colors.scss";
+
+nav {
+  background-color: $primary;
+  height: 50px;
+}
+
+.search-box {
+  height: 35px !important;
+  border: none !important;
+  border-radius: 1px !important;
+  &::placeholder,
+  &::-webkit-input-placeholder,
+  &:-ms-input-placeholder {
+    color: $light;
+    font-size: 18px;
+  }
+}
+
+.btn-search {
+  height: 35px !important;
+}

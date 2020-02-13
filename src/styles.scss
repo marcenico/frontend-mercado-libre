@@ -1,10 +1,6 @@
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+@import "./assets/scss/colors.scss";
 
-$theme-colors: (
-  primary: #9e9176,
-  secondary: #ccc8bd
-);
-
-@import "../node_modules/bootstrap/scss/bootstrap";
+body {
+  background-color: $light;
+  font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, sans-serif !important;
+}

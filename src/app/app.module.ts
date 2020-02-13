@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { HeaderComponent } from './components/search-box/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBoxComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

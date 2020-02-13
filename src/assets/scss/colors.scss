@@ -1,0 +1,19 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+$primary: #ffe600;
+$dark: #333333;
+$secondary: #999999;
+// $secondary: #999999;
+$light: #eeeeee;
+$success: #3483fa;
+
+$theme-colors: (
+  primary: $primary,
+  dark: $dark,
+  secondary: $secondary,
+  light: $light,
+  success: $success
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
