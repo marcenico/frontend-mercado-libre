@@ -1,4 +1,5 @@
 @import "../../../assets/scss/colors.scss";
+@import "../../../assets/scss/font-sizes.scss";
 
 nav {
   background-color: $primary;
@@ -12,8 +13,8 @@ nav {
   &::placeholder,
   &::-webkit-input-placeholder,
   &:-ms-input-placeholder {
-    color: $light;
-    font-size: 18px;
+    color: $secondary;
+    font-size: $font-size5;
   }
 }
 

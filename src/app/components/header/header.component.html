@@ -1,33 +1,38 @@
-<nav class="row mx-0 position-sticky justify-content-center">
-  <div class="col-3 col-md-2 col-lg-1 my-auto">
-    <img
-      class="d-block py-2 img-fluid mx-auto"
-      src="assets/img/Logo_ML.png"
-      alt="Logo ML">
-  </div>
-  <div class="col-7 col-md-8 col-lg-9 my-auto">
-    <div class="form-inline m-0">
-      <div class="input-group w-100">
-        <input
-          type="search"
-          class="form-control search-box"
-          placeholder="Nunca dejes de buscar"
-          aria-label="Nunca dejes de buscar"
-          aria-describedby="button-addon2"
-          [(ngModel)]="query">
-        <div class="input-group-append">
-          <button
-            class="btn btn-light btn-search"
-            type="button"
-            id="button-addon2"
-            (click)="search()">
-            <img
-              src="assets/img/ic_Search.png"
-              class="d-block img-fluid"
-              alt="search">
-          </button>
+<nav class="row no-gutters position-sticky justify-content-center">
+  <div class="col-10">
+    <div class="row mx-0 justify-content-center">
+      <div class="col-auto pl-0 my-auto">
+        <img
+          class="d-block py-2 img-fluid"
+          src="assets/img/Logo_ML.png"
+          alt="Logo ML">
+      </div>
+      <div class="col my-auto">
+        <div class="form-inline m-0">
+          <div class="input-group w-100">
+            <input
+              type="search"
+              class="form-control search-box"
+              placeholder="Nunca dejes de buscar"
+              aria-label="Nunca dejes de buscar"
+              aria-describedby="button-addon2"
+              [(ngModel)]="query">
+            <div class="input-group-append">
+              <button
+                class="btn btn-light btn-search"
+                type="button"
+                id="button-addon2"
+                (click)="search()">
+                <img
+                  src="assets/img/ic_Search.png"
+                  class="d-block img-fluid"
+                  alt="search">
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </nav>
