@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from 'src/app/services/item/item.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,17 +11,14 @@ export class HeaderComponent implements OnInit {
   query = '';
 
   constructor(
-    private itemService: ItemService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
   }
 
   search() {
-    this.itemService.getItems(this.query)
-      .subscribe((res) => {
-        console.log(res)
-      }, err => console.error(err));
+    this.router.navigate(['/items'], { queryParams: { search: this.query } })
   }
 
 }
