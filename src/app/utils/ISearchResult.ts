@@ -22,4 +22,5 @@ export interface IItem {
     picture: string;
     condition: string;
     free_shipping: boolean;
+    address: string
 }
