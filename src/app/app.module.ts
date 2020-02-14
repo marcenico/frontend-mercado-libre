@@ -7,12 +7,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ItemComponent } from './components/item/item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

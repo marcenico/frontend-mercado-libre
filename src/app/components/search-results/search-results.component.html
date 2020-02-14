@@ -11,37 +11,11 @@
       <span [hidden]="i == searchResult.categories.length-1">></span>
     </span>
   </div>
-  <!-- ITEM -->
+  <!-- ITEMS -->
   <div
     class="col-10 bg-white py-sm border-bottom"
     *ngFor="let item of searchResult.items; let i = index;">
-    <div class="row no-gutters">
-      <!-- PICTURE -->
-      <div class="col-auto px-sm">
-        <img class="picture-size" [src]="item.picture">
-      </div>
-      <!-- INFO -->
-      <div class="col px-0">
-        <!-- PRECIO - DIRECCION -->
-        <div class="row mt-2 no-gutters">
-          <!-- PRECIO -->
-          <div class="col-auto my-auto font-size4">
-            {{item.price.decimals | currency}}
-          </div>
-          <img
-            class="h-100 w-auto my-auto px-2"
-            *ngIf="item.free_shipping"
-            src="assets/img/ic_shipping.png">
-          <!-- DIRECCION -->
-          <div class="col-auto my-auto ml-auto mr-5 font-size8 text-secondary">
-            {{item.address}}
-          </div>
-        </div>
-        <!-- TITULO -->
-        <p class="font-size5 pt-lg">
-          {{item.title}}
-        </p>
-      </div>
-    </div>
+    <!-- ITEM -->
+    <app-item [item]="item"></app-item>
   </div>
 </div>
