@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ItemComponent } from './components/item/item.component';
 import { CategoryPathComponent } from './components/category-path/category-path.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CategoryPathComponent } from './components/category-path/category-path.
     HeaderComponent,
     SearchResultsComponent,
     ItemComponent,
-    CategoryPathComponent
+    CategoryPathComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,
