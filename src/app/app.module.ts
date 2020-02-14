@@ -28,7 +28,6 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' }),
     FormsModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
