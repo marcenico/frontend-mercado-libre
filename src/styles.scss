@@ -1,6 +1,25 @@
 @import "./assets/scss/colors.scss";
+@import "./assets/scss/font-sizes.scss";
 
 body {
   background-color: $light;
   font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, sans-serif !important;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.py-sm{
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.px-sm{
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.pt-lg{
+  padding-top: 32px !important;
 }
