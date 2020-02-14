@@ -16,6 +16,7 @@
               placeholder="Nunca dejes de buscar"
               aria-label="Nunca dejes de buscar"
               aria-describedby="button-addon2"
+              (keyup.enter)="search()"
               [(ngModel)]="query">
             <div class="input-group-append">
               <button
