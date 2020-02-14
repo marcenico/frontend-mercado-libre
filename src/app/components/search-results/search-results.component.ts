@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from 'src/app/services/item/item.service';
+import { ISearchResult } from 'src/app/utils/ISearchResult';
 
 @Component({
   selector: 'app-search-results',
@@ -8,7 +9,7 @@ import { ItemService } from 'src/app/services/item/item.service';
   styleUrls: ['./search-results.component.scss']
 })
 export class SearchResultsComponent implements OnInit {
-  items: any[];
+  searchResult: ISearchResult;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,8 +19,8 @@ export class SearchResultsComponent implements OnInit {
   ngOnInit() {
     this.route.queryParamMap.subscribe((res: any) => {
       this.itemService.getItems(res.params.search)
-        .subscribe((res: any[]) => {
-          this.items = res;
+        .subscribe((res: ISearchResult) => {
+          this.searchResult = res;
         }, err => console.error(err));
     });
   }
