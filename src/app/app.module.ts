@@ -8,13 +8,15 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ItemComponent } from './components/item/item.component';
+import { CategoryPathComponent } from './components/category-path/category-path.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SearchResultsComponent,
-    ItemComponent
+    ItemComponent,
+    CategoryPathComponent
   ],
   imports: [
     BrowserModule,

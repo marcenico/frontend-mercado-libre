@@ -3,13 +3,7 @@
   class="row no-gutters mb-5 justify-content-center">
   <!-- PATH CATEGORIAS -->
   <div class="col-10 py-sm">
-    <span
-      class="text-secondary font-size8"
-      [ngClass]="{'font-weight-bold': i == searchResult.categories.length-1}"
-      *ngFor="let category of searchResult.categories; let i = index;">
-      {{category}}
-      <span [hidden]="i == searchResult.categories.length-1">></span>
-    </span>
+    <app-category-path [categories]="searchResult.categories"></app-category-path>
   </div>
   <!-- ITEMS -->
   <div

@@ -1,0 +1,7 @@
+<span
+  class="text-secondary font-size8"
+  [ngClass]="{'font-weight-bold': i == categories.length-1}"
+  *ngFor="let category of categories; let i = index;">
+  {{category}}
+  <span [hidden]="i == categories.length-1">></span>
+</span>
