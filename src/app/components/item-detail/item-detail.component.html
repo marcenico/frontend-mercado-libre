@@ -1,5 +1,5 @@
 <div
-  *ngIf="item"
+  *ngIf="item && item.id.length"
   class="row no-gutters mb-5 justify-content-center">
   <!-- PATH CATEGORIAS -->
   <div
@@ -45,4 +45,10 @@
         </div>
       </div>
   </div>
+</div>
+
+<div *ngIf="!item.id.length">
+  <p class="alert alert-dark text-center">
+    No se encontraron resultados
+  </p>
 </div>
