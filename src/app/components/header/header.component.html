@@ -1,11 +1,15 @@
-<nav class="row no-gutters position-sticky justify-content-center">
+<nav class="row no-gutters w-100 position-fixed justify-content-center">
   <div class="col-10">
     <div class="row mx-0 justify-content-center">
       <div class="col-auto pl-0 pr-4 my-auto">
         <img
-          class="d-block py-2 img-fluid"
+          draggable="false"
+          ondragstart="return false;"
+          (contextmenu)="false"
+          class="d-block py-2 img-fluid cursor-pointer"
           src="assets/img/Logo_ML.png"
-          alt="Logo ML">
+          alt="Logo ML"
+          [routerLink]="['/']">
       </div>
       <div class="col px-0 my-auto">
         <div class="form-inline m-0">

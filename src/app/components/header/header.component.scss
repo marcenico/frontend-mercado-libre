@@ -4,6 +4,8 @@
 nav {
   background-color: $primary;
   height: 55px;
+  top: 0;
+  z-index: 1000;
 }
 
 .search-box {
