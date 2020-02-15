@@ -1,4 +1,6 @@
-<div class="row no-gutters">
+<div
+  class="row no-gutters bg-white py-sm border-bottom cursor-pointer"
+  [routerLink]="['/items', item.id]">
   <!-- PICTURE -->
   <div class="col-auto px-sm">
     <img class="picture-size" [src]="item.picture">
