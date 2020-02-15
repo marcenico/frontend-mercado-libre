@@ -4,6 +4,7 @@
 body {
   background-color: $light;
   font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, sans-serif !important;
+  margin-top: 55px;
 }
 
 .form-control {
@@ -30,8 +31,25 @@ p {
   padding-right: 16px !important;
 }
 
+.pt-sm {
+  padding-top: 16px !important;
+}
+
+.pr-sm {
+  padding-right: 16px !important;
+}
+
+.pl-sm {
+  padding-left: 16px !important;
+}
+
 .pt-lg {
   padding-top: 32px !important;
+}
+
+.py-lg {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
 }
 
 .cursor-pointer {

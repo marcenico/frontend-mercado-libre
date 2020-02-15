@@ -13,13 +13,14 @@ export class SearchResultsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private itemService: ItemService,
+    public itemService: ItemService,
   ) { }
 
   ngOnInit() {
     this.route.queryParamMap.subscribe((res: any) => {
       this.itemService.getItems(res.params.search)
         .subscribe((res: ISearchResult) => {
+          this.itemService.categories = res.categories;
           this.searchResult = res;
         }, err => console.error(err));
     });

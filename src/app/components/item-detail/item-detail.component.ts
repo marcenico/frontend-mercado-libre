@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from 'src/app/services/item/item.service';
+import { IItem, ISearchResult } from 'src/app/utils/ISearchResult';
 
 @Component({
   selector: 'app-item-detail',
@@ -8,6 +9,7 @@ import { ItemService } from 'src/app/services/item/item.service';
   styleUrls: ['./item-detail.component.scss']
 })
 export class ItemDetailComponent implements OnInit {
+  item: IItem;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,7 +20,7 @@ export class ItemDetailComponent implements OnInit {
     const id = this.route.snapshot.params.id;
     this.itemService.getById(id)
       .subscribe((res: any) => {
-        console.log(res);
+        this.item = res.item;
       }, err => console.error(err));
   }
 

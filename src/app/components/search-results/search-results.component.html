@@ -2,8 +2,9 @@
   *ngIf="searchResult"
   class="row no-gutters mb-5 justify-content-center">
   <!-- PATH CATEGORIAS -->
-  <div class="col-10 py-sm">
-    <app-category-path [categories]="searchResult.categories"></app-category-path>
+  <div
+    class="col-10 py-sm">
+    <app-category-path [categories]="itemService.categories"></app-category-path>
   </div>
   <!-- ITEMS -->
   <div

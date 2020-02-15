@@ -1,1 +1,48 @@
-<p>item-detail works!</p>
+<div
+  *ngIf="item"
+  class="row no-gutters mb-5 justify-content-center">
+  <!-- PATH CATEGORIAS -->
+  <div
+    class="col-10 py-sm">
+    <app-category-path [categories]="itemService.categories"></app-category-path>
+  </div>
+  <!-- ITEM -->
+  <div
+    class="col-10 px-0">
+      <div class="row mx-0">
+        <div class="col-md-12 col-lg-8">
+          <div class="d-flex mx-auto picture-size">
+            <img
+              class="d-block m-auto"
+              [src]="item.picture">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="text-info pt-lg font-size7">
+            {{item.condition == 'new' ? 'Nuevo' : 'Usado'}} - {{item.sold_quantity}} vendidos
+          </p>
+          <p class="text-dark font-weight-bold pt-sm font-size4">
+            {{item.title}}
+          </p>
+          <p class="text-dark font-weight-bold pt-lg font-size1">
+            {{item.price.decimals | currency}}
+          </p>
+          <div class="pt-lg pr-sm">
+            <button class="btn btn-block btn-success">
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="col-md-12 col-lg-8 pt-lg pr-0 pl-lg">
+          <p class="text-dark font-size3">
+            Descripción del producto
+          </p>
+          <p class="font-size6 py-lg">
+            {{item.description}}
+          </p>
+        </div>
+      </div>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { environment as ENVIROMENT } from 'src/environments/environment';
 })
 export class ItemService {
   apiUrl = ENVIROMENT.apiUrl;
+  categories: string[] = [];
 
   constructor(
     private http: HttpClient,

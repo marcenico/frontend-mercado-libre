@@ -3,8 +3,8 @@
 
 $primary: #ffe600;
 $dark: #333333;
+$secondary-dark: #666666;
 $secondary: #999999;
-// $secondary: #999999;
 $light: #eeeeee;
 $success: #3483fa;
 
@@ -13,7 +13,8 @@ $theme-colors: (
   dark: $dark,
   secondary: $secondary,
   light: $light,
-  success: $success
+  success: $success,
+  info: $secondary-dark
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
