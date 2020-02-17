@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from 'src/app/services/item/item.service';
-import { IItem, ISearchResult } from 'src/app/utils/ISearchResult';
+import { IItem } from 'src/app/utils/ISearchResult';
 import { Title } from '@angular/platform-browser';
 
 @Component({
