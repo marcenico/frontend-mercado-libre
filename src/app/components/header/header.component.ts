@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from 'src/app/services/item/item.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,11 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private title: Title
   ) { }
 
   ngOnInit() {
+    this.title.setTitle('Buscar productos')
   }
 
   search() {

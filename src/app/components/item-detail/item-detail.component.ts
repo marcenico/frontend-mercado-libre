@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from 'src/app/services/item/item.service';
 import { IItem, ISearchResult } from 'src/app/utils/ISearchResult';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-item-detail',
@@ -14,9 +15,11 @@ export class ItemDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private itemService: ItemService,
+    private title: Title
   ) { }
 
   ngOnInit() {
+    this.title.setTitle('Detalle producto')
     const id = this.route.snapshot.params.id;
     this.itemService.getById(id)
       .subscribe((res: any) => {
